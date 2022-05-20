@@ -18,12 +18,15 @@ app.get('/url', (req, res) => {
 
 
 app.get('/testvideo', (req, res) => {
-    var videoName = req.query.videoName;
+    var encodedVideoName = req.query.videoName;
     var videoPath = null;
+
+    // Base64 decode
+    var buff = Buffer.from(encodedVideoName, 'base64')
+    var videoName = buff.toString('ascii')
 
     var file = fs.readFileSync('./db.json');
     var data = JSON.parse(file);
-    
 
     var videos = data["videos"];
 
