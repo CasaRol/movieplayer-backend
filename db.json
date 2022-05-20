@@ -1,0 +1,12 @@
+{
+    "videos": [
+        {   
+            "name": "test_video1",
+            "path": "assets/test_video1.mp4"
+        },
+        {
+            "name": "test_video2",
+            "path": "assets/test_video2.mp4"
+        }
+    ]
+}
